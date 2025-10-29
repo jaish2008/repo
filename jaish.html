@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheezy Crust 🍕</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fffbea;
+      margin:0px ;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    /* Header */
+    header{
+        background-color: #ff3131;
+        color: rgb(240, 240, 244);
+        padding: 15px 50px;
+        text-align: center;
+        position: sticky;
+        top: 0%;
+        z-index: 100;
+    
+    }
+
+    header h1 {
+      font-size: 190px;
+      text-align: center;
+      font-weight: 850;
+      
+      font-family:Verdana, Geneva, Tahoma, sans-serif
+    }
+    /*navbar*/
+    /* Header overall */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Top Logo Section */
+.top-logo {
+  background: linear-gradient(90deg, #ff914d, #ff7f50);
+  text-align: center;
+  padding: 15px 0;
+}
+
+.top-logo h1 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: #ff914d;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 3px;
+}
+
+.nav-links li a:hover {
+  color: #e85d04;
+  border-bottom: 2px solid #e85d04;
+}
+
+.nav-links li a.active {
+  color: #e85d04;
+  border-bottom: 2px solid #e85d04;
+}
+
+/* Mobile Responsive */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: #ff914d;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 110px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 0 12px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
+}
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      background: linear-gradient(120deg, #ff3131, #ffd000);
+      color: white;
+    }
+
+    .hero-text {
+      flex: 1 1 400px;
+    }
+
+    .hero-text h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .hero-text button {
+      background-color: white;
+      color: #ff3131;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .hero-text button:hover {
+      background-color: #ffd000;
+    }
+
+    .hero img {
+      width: 400px;
+      border-radius: 20px;
+    }
+
+    /* Menu Section */
+    .menu {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff6f2;
+}
+
+.menu h2 {
+  color: #d1411f;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.pizza-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.pizza-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 230px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.pizza-card:hover {
+  transform: scale(1.05);
+}
+
+.pizza-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.pizza-card h3 {
+  color: #d1411f;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.pizza-card p {
+  color: #555;
+  font-size: 0.9em;
+}
+
+.pizza-card span {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+    
+
+    /* About Section */
+    .about {
+      background-color: #fff0b3;
+      padding: 80px 10%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .about img {
+      width: 400px;
+      border-radius: 20px;
+    }
+
+    .about-text {
+      flex: 1 1 400px;
+    }
+
+    .about-text h2 {
+      color: #ff3131;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* Reviews */
+    .reviews {
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    .reviews h2 {
+      color: #ff3131;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .review-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .review {
+      background-color: white;
+      border-radius: 20px;
+      width: 250px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .review p {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .review h4 {
+      color: #ff3131;
+    }
+
+    /* Contact Section */
+    .contact {
+      background-color: #fff0b3;
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #ff3131;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 2px solid #ff3131;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    button.submit {
+      background-color: #ff3131;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button.submit:hover {
+      background-color: #ffd000;
+      color: #ff3131;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ff3131;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        text-align: center;
+      }
+      .hero img {
+        margin-top: 20px;
+        width: 80%;
+      }
+      .about {
+        text-align: center;
+      }
+      .about img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <header>
+  <!-- Logo / Heading Section -->
+  <div class="top-logo">
+    <h1>Cheezy Crust 🍕</h1>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </nav>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h2>Hot. Fresh. Cheezy. ❤️</h2>
+      <p>Welcome to Cheezy Crust – the ultimate pizza experience made with fresh dough, creamy cheese, and pure love!</p>
+      <button>Order Now</button>
+    </div>
+    <img src="pizza6.jpeg" alt="Cheezy Pizza">
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <h2>Our Popular Pizzas</h2>
+    <div class="pizza-container">
+      <div class="pizza-card">
+        <img src="pizza5.jpeg" alt="Margherita">
+        <h3>Margherita</h3>
+        <p>Classic cheese & tomato</p>
+        <span>₹249</span>
+      </div>
+      <div class="pizza-card">
+        <img src="pizza4.jpeg" alt="Pepperoni">
+        <h3>Pepperoni</h3>
+        <p>Spicy & cheesy delight</p>
+        <span>₹299</span>
+      </div>
+      <div class="pizza-card">
+        <img src="pizza2.jpeg" alt="chilli Paneer ">
+        <h3>chilli Paneer </h3>
+        <p>creamy & stuffed</p>
+        <span>₹289</span>
+      </div>
+      <div class="pizza-card">
+        <img src="pizza.jpeg" alt="Spicy Chicken tikka">
+        <h3>Spicy Chicken tikka</h3>
+        <p>Hot & saucy base topped with chicken tikka  </p>
+        <span>₹359</span>
+      </div>
+       <div class="pizza-card">
+        <img src="pizza8.jpeg" alt="farmhouse">
+        <h3>farmhouse</h3>
+        <p>Delightful blend of fresh farm flavours</p>
+        <span>₹219</span>
+      </div>
+      <div class="pizza-card">
+        <img src="pizza3.jpeg" alt="Veggie Supreme">
+        <h3>Veggie Supreme</h3>
+        <p>Loaded with veggies</p>
+        <span>₹279</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <img src="pizza7.jpeg" alt="About Pizza">
+    <div class="about-text">
+      <h2>About Cheezy Crust</h2>
+      <p>At Cheezy Crust, we’re passionate about pizza! Every bite brings you closer to the authentic Italian flavor with a fun twist. Our pizzas are made with love, laughter, and loads of cheese!</p>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews" id="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="review-cards">
+      <div class="review">
+        <p>“Best pizza in town! So cheesy and delicious 😋”</p>
+        <h4>- Simran</h4>
+      </div>
+      <div class="review">
+        <p>“I love the fun vibes and the crispy crust!”</p>
+        <h4>- Arjun</h4>
+      </div>
+      <div class="review">
+        <p>“Fast delivery and super fresh pizzas. Highly recommend!”</p>
+        <h4>- Mehak</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit" class="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Cheezy Crust. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
