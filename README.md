@@ -24,7 +24,7 @@ https://jaish2008.github.io/repo/
 
 
 📂 Future Improvements
-• JavaScript ordering system
-• Dark Mode
-• Online Cart
-• Responsive Mobile Navigation
+• JavaScript ordering system<br>
+• Dark Mode<br>
+• Online Cart<br>
+• Responsive Mobile Navigation<br>
