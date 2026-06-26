@@ -11,13 +11,12 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
       background-color: #fffbea;
-      margin:0px ;
       color: #333;
-      scroll-behavior: smooth;
     }
     /* Header */
     header{
@@ -131,12 +130,12 @@ header {
     /* Hero Section */
     .hero {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      padding: 60px 10%;
-      background: linear-gradient(120deg, #ff3131, #ffd000);
+      padding: 80px 10%;
+      background: linear-gradient(135deg, #ff512f, #f09819);
       color: white;
+      gap:60px;
     }
 
     .hero-text {
@@ -157,22 +156,32 @@ header {
       background-color: white;
       color: #ff3131;
       border: none;
-      padding: 12px 25px;
-      border-radius: 25px;
+      padding: 14px 32px;
+      border-radius: 30px;
       cursor: pointer;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 17px;
       transition: 0.3s;
     }
 
     .hero-text button:hover {
-      background-color: #ffd000;
+      background:#ff3131;
+color:white;
+transform:translateY(-3px);
     }
 
     .hero img {
-      width: 400px;
-      border-radius: 20px;
+      width:380px;
+height:380px;
+object-fit:cover;
+border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,.3);
+transition:.4s;
     }
+
+    .hero img:hover{
+transform:scale(1.05);
+}
 
     /* Menu Section */
     .menu {
@@ -201,11 +210,12 @@ header {
   padding: 15px;
   width: 230px;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: 0.35s;
 }
 
 .pizza-card:hover {
-  transform: scale(1.05);
+  transform:translateY(-12px);
+box-shadow:0 20px 35px rgba(0,0,0,.18);
 }
 
 .pizza-card img {
@@ -285,13 +295,17 @@ header {
     }
 
     .review {
-      background-color: white;
-      border-radius: 20px;
-      width: 250px;
-      padding: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+     background:white;
+     border-radius:20px;
+     padding:25px;
+     width:260px;
+     box-shadow:0 10px 25px rgba(0,0,0,.1);
+     transition:.3s;
     }
-
+    
+     .review:hover{
+     transform:translateY(-10px);
+    }
     .review p {
       font-style: italic;
       margin-bottom: 10px;
@@ -323,12 +337,20 @@ header {
     }
 
     input, textarea {
-      padding: 12px;
-      border: 2px solid #ff3131;
-      border-radius: 10px;
-      outline: none;
-    }
-
+      textarea{
+      padding:14px;
+      border:2px solid #ff914d;
+     border-radius:12px;
+     font-size:16px;
+     transition:.3s;
+     }
+    
+      input:focus,
+      textarea:focus{
+      border-color:#ff3131;
+      box-shadow:0 0 10px rgba(255,49,49,.3);
+       }
+      
     button.submit {
       background-color: #ff3131;
       color: white;
@@ -346,10 +368,10 @@ header {
 
     /* Footer */
     footer {
-      background-color: #ff3131;
+      background-color: #222;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 25px;
     }
 
     @media (max-width: 768px) {
@@ -380,7 +402,7 @@ header {
   <!-- Navigation Bar -->
   <nav class="navbar">
     <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#hero" class="active">Home</a></li>
       <li><a href="#menu">Menu</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#reviews">Reviews</a></li>
@@ -395,7 +417,7 @@ header {
     <div class="hero-text">
       <h2>Hot. Fresh. Cheezy. ❤️</h2>
       <p>Welcome to Cheezy Crust – the ultimate pizza experience made with fresh dough, creamy cheese, and pure love!</p>
-      <button>Order Now</button>
+      <buttonon click="location.href='#menu'">Order Now</button>
     </div>
     <img src="pizza6.jpeg" alt="Cheezy Pizza">
   </section>
@@ -487,5 +509,10 @@ header {
     <p>© 2025 Cheezy Crust. All Rights Reserved.</p>
   </footer>
 
+  <script>
+function toggleMenu(){
+document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
 </body>
 </html>
